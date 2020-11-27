@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TheStrayCat</string>
+
+    <!-- Всплывающие сообщения -->
+    <string name="toast_changes_is_saved">Изменения сохранены!</string>
+    <string name="toast_about_fields">Заполните все поля!</string>
+    <string name="toast_registration_is_ok">Регистрация успешна!</string>
+    <string name="toast_registration_is_failed">Регистрация не удалась!</string>
+    <string name="toast_error">Невозможно выполнить без соглашения!</string>
+    <string name="toast_after_registration">Регистрация пройдена!</string>
+    <string name="toast_note_success">Запись успешно добавлена!</string>
+
+    <!-- Подсказки -->
+    <string name="hint_email">Введите e-mail</string>
+    <string name="hint_password">Введите пароль</string>
+    <string name="hint_register_username">Имя пользователя</string>
+    <string name="hint_register_email">E-mail</string>
+    <string name="hint_register_password">Пароль</string>
+    <string name="hint_register_password2">Повторите пароль</string>
+
+    <!-- Кнопки -->
+    <string name="button_publish">Опубликовать</string>
+    <string name="button_enter">Войти</string>
+    <string name="button_register">Регистрация</string>
+    <string name="button_registration">Зарегистрироваться</string>
+    <string name="button_add">Написать</string>
+    <string name="button_change">Изменить</string>
+
+</resources>

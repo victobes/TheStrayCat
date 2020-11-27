@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "226804154608",
+    "firebase_url": "https://the-stray-cat.firebaseio.com",
+    "project_id": "the-stray-cat",
+    "storage_bucket": "the-stray-cat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226804154608:android:872f9698c0795af6f04235",
+        "android_client_info": {
+          "package_name": "com.example.thestraycat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226804154608-4mqsr15d6muc9494fl7e74ab2q3s0g3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYRSXissVX73LD_0AjrERq11BhIgECmRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226804154608-4mqsr15d6muc9494fl7e74ab2q3s0g3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
