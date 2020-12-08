@@ -1,7 +1,7 @@
 package com.example.thestraycat;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -17,8 +17,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import android.os.Bundle;
-import android.widget.ImageView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -99,7 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        /*OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
                 Intent loginActivity = new Intent(getApplicationContext(), LoginActivity.class);
@@ -107,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
                 finish();
             }
         };
-        getOnBackPressedDispatcher().addCallback(this, callback);*/
+        getOnBackPressedDispatcher().addCallback(this, callback);
 
     }
 
@@ -211,7 +209,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void updateUI() {
 
-        Intent homeActivity = new Intent(getApplicationContext(), MainActivity.class);
+        Intent homeActivity = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(homeActivity);
         finish();
 

@@ -25,5 +25,7 @@
     <string name="button_registration">Зарегистрироваться</string>
     <string name="button_add">Написать</string>
     <string name="button_change">Изменить</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
