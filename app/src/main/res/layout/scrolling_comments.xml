@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.PostActivity"
-    tools:showIn="@layout/post_activity_test">
+    tools:showIn="@layout/post_activity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_comment"
