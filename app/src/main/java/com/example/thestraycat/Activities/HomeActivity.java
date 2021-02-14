@@ -1,4 +1,4 @@
-package com.example.thestraycat;
+package com.example.thestraycat.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,9 +8,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.thestraycat.Fragments.HomeFragment;
+import com.example.thestraycat.Fragments.PostFragment;
 import com.example.thestraycat.Fragments.MapFragment;
 import com.example.thestraycat.Fragments.ProfileFragment;
+import com.example.thestraycat.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -28,10 +29,11 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
 
-        if (selectedFragment != null){
+        /*if (selectedFragment != null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MapFragment()).commit();
+        }*/
 
-        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MapFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
@@ -41,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
 
                     switch (item.getItemId()){
                         case R.id.nav_home:
-                            selectedFragment = new HomeFragment();
+                            selectedFragment = new PostFragment();
                             break;
 
                         case R.id.nav_map:
@@ -64,5 +66,6 @@ public class HomeActivity extends AppCompatActivity {
                     return true;
                 }
             };
+
 
 }

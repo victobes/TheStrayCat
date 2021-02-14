@@ -1,4 +1,4 @@
-package com.example.thestraycat;
+package com.example.thestraycat.Activities;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,15 +11,17 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.thestraycat.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,14 +36,20 @@ import com.google.firebase.storage.UploadTask;
 public class RegisterActivity extends AppCompatActivity {
 
 
-    ImageView registerUserPhoto;
+    //ImageView registerUserPhoto;
     static int PReqCode = 1;
     static int REQUESTCODE = 1;
     Uri pickedImgUri;
 
-    private EditText userEmail, userPassword, userPasswordRepeat, userName;
+    private MaterialTextView registerText;
+    private TextInputLayout registerUsername, registerEmail, registerPasswordFirst, registerPasswordSecond;
+    private TextInputEditText registerUsernameEdit, registerEmailEdit, registerPasswordEditFirst, registerPasswordEditSecond;
+    private ShapeableImageView registerUserImage;
+    private MaterialButton registerButton;
+
+    /*private EditText userEmail, userPassword, userPasswordRepeat, userName;
     private ProgressBar progressRegister;
-    private Button buttonRegister;
+    private Button buttonRegister;*/
 
     private FirebaseAuth mAuth;
 
@@ -51,32 +59,45 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        userEmail = findViewById(R.id.regMail);
+        registerUserImage = findViewById(R.id.register_user_image);
+        registerText = findViewById(R.id.register_text);
+        registerUsername = findViewById(R.id.register_username);
+        registerEmail = findViewById(R.id.register_email);
+        registerPasswordFirst = findViewById(R.id.register_password_first);
+        registerPasswordSecond = findViewById(R.id.register_password_second);
+        registerButton = findViewById(R.id.register_button);
+        registerUsernameEdit = findViewById(R.id.register_username_edit);
+        registerEmailEdit = findViewById(R.id.register_email_edit);
+        registerPasswordEditFirst = findViewById(R.id.register_password_edit_first);
+        registerPasswordEditSecond = findViewById(R.id.register_password_edit_second);
+        registerButton = findViewById(R.id.register_button);
+
+        /*userEmail = findViewById(R.id.regMail);
         userPassword = findViewById(R.id.regPassword);
         userPasswordRepeat = findViewById(R.id.regPassword2);
         userName = findViewById(R.id.regName);
         progressRegister = findViewById(R.id.regProgressBar);
         buttonRegister = findViewById(R.id.regBtn);
-        progressRegister.setVisibility(View.INVISIBLE);
+        progressRegister.setVisibility(View.INVISIBLE);*/
 
         mAuth = FirebaseAuth.getInstance();
 
-        buttonRegister.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                buttonRegister.setVisibility(View.INVISIBLE);
-                progressRegister.setVisibility(View.VISIBLE);
-                final String email = userEmail.getText().toString();
-                final String password = userPassword.getText().toString();
-                final String passwordRepeat = userPasswordRepeat.getText().toString();
-                final String name = userName.getText().toString();
+                //buttonRegister.setVisibility(View.INVISIBLE);
+                //progressRegister.setVisibility(View.VISIBLE);
+                final String name = registerUsernameEdit.getText().toString();
+                final String email = registerEmailEdit.getText().toString();
+                final String password = registerPasswordEditFirst.getText().toString();
+                final String passwordRepeat = registerPasswordEditSecond.getText().toString();
 
                 if (email.isEmpty() || name.isEmpty() || password.isEmpty() || !password.equals(passwordRepeat)) {
 
                     Toast.makeText(getApplicationContext(), R.string.toast_about_fields, Toast.LENGTH_LONG).show();
-                    buttonRegister.setVisibility(View.VISIBLE);
-                    progressRegister.setVisibility(View.INVISIBLE);
+                    //buttonRegister.setVisibility(View.VISIBLE);
+                    //progressRegister.setVisibility(View.INVISIBLE);
 
                 } else {
 
@@ -86,9 +107,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        registerUserPhoto = findViewById(R.id.regUserPhoto);
+        //registerUserPhoto = findViewById(R.id.regUserPhoto);
 
-        registerUserPhoto.setOnClickListener(new View.OnClickListener() {
+        registerUserImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -131,8 +152,8 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
 
                             Toast.makeText(getApplicationContext(), R.string.toast_registration_is_failed + task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                            buttonRegister.setVisibility(View.VISIBLE);
-                            progressRegister.setVisibility(View.INVISIBLE);
+                            //buttonRegister.setVisibility(View.VISIBLE);
+                            //progressRegister.setVisibility(View.INVISIBLE);
 
                         }
                     }
@@ -251,7 +272,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == REQUESTCODE && data != null) {
 
             pickedImgUri = data.getData();
-            registerUserPhoto.setImageURI(pickedImgUri);
+            registerUserImage.setImageURI(pickedImgUri);
 
         }
 

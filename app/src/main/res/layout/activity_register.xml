@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<?xml version="1.0" encoding="utf-8"?><!-- <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,8 +20,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
-    <!--android:src="@drawable/lenivets_add"-->
+        app:layout_constraintVertical_bias="0.786"
+        android:src="@drawable/test_image_1"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -125,4 +124,142 @@
         app:layout_constraintStart_toStartOf="@+id/regBtn"
         app:layout_constraintTop_toTopOf="@+id/regBtn" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout> -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".Activities.RegisterActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/register_user_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:shapeAppearance="@style/circleImageView"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/register_user_image"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/register_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Регистрация"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_username"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/hint_register_username"
+        android:textColorHint="@color/mediumGrey"
+        app:boxBackgroundColor="@color/ultraLightGrey"
+        app:boxStrokeColor="@color/lightGrey"
+        app:hintTextColor="@color/lightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_username_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textColor="@color/darkGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/hint_email"
+        android:textColorHint="@color/mediumGrey"
+        app:boxBackgroundColor="@color/ultraLightGrey"
+        app:boxStrokeColor="@color/lightGrey"
+        app:hintTextColor="@color/lightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/darkGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_password_first"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/hint_password"
+        android:textColorHint="@color/mediumGrey"
+        app:boxBackgroundColor="@color/ultraLightGrey"
+        app:boxStrokeColor="@color/lightGrey"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/lightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password_edit_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/darkGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_password_second"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:hint="Повторите пароль"
+        android:textColorHint="@color/mediumGrey"
+        app:boxBackgroundColor="@color/ultraLightGrey"
+        app:boxStrokeColor="@color/lightGrey"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/lightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password_edit_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/darkGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/button_register"
+        android:textColor="@color/darkGrey"
+        app:strokeColor="@color/lightGrey" />
+
+</LinearLayout>

@@ -27,5 +27,8 @@
     <string name="button_change">Изменить</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key">AIzaSyBKtQrRdTkxdAZOMBrQ-Ky2RsSecJ16YHc</string>
+    <string name="marker_title">2</string>
+    <string name="test_text">Три инвалида. - Страдания Джорджа и Гарриса. - Жертва ста семи смертельных болезней/недугов. - Полезные рекомендации. - Лекарство от проблем с печенью у детей. Мы сошлись во мнениях, что мы переутомились и нуждаемся в отдыхе. - Неделя катания по морю/океану? - Джордж предложил путешествие по реке. - Монморанси возражает. - Первоначальное предложение принято большинством: трое против одного.</string>
 
 </resources>

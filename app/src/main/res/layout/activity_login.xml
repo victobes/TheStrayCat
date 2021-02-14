@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<?xml version="1.0" encoding="utf-8"?><!--<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -110,4 +109,89 @@
         app:layout_constraintEnd_toEndOf="@+id/login_button"
         app:layout_constraintStart_toStartOf="@+id/login_button"
         app:layout_constraintTop_toTopOf="@+id/login_button" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout> -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".Activities.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Авторизация"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/hint_email"
+        android:textColorHint="@color/mediumGrey"
+        app:boxBackgroundColor="@color/ultraLightGrey"
+        app:boxStrokeColor="@color/ultraLightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/mediumGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_password"
+        android:textColorHint="@color/mediumGrey"
+        app:boxBackgroundColor="@color/ultraLightGrey"
+        app:boxStrokeColor="@color/ultraLightGrey"
+        app:endIconMode="password_toggle"
+        app:hintTextColor="@color/lightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/mediumGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/button_enter"
+        android:textColor="@color/darkGrey"
+        app:strokeColor="@color/lightGrey" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_register_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_register"
+        android:textColor="@color/lightGrey"
+        app:strokeColor="@color/lightGrey" />
+
+</LinearLayout>
