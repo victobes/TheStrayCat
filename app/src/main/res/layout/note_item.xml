@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="250dp">
+
+
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/note_view_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="5dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="1.0"
+
+    app:shapeAppearanceOverlay="@style/shapeableImageView"
+    app:srcCompat="@drawable/test_image_2" />
+
+
+<TextView
+    android:id="@+id/note_view_title"
+    android:layout_width="0dp"
+    android:layout_height="70dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:text="TextView"
+    android:textColor="#fff"
+    android:textSize="32sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/note_view_profile_image"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.97" />
+
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/note_view_profile_image"
+    android:layout_width="76dp"
+    android:layout_height="76dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.965"
+    app:shapeAppearance="@style/circleImageView"
+    app:srcCompat="@drawable/test_image_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="250dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/note_view_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        style="@style/shapeableImageView"
+        app:srcCompat="@drawable/test_image_2" />
+
+    <TextView
+        android:id="@+id/note_view_title"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textColor="#fff"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/note_view_profile_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/note_view_profile_image"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965"
+        app:shapeAppearance="@style/circleImageView"
+        app:srcCompat="@drawable/test_image_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"-->

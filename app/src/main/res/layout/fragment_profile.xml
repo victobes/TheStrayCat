@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context="Fragments.ProfileFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_image_profile"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:srcCompat="@drawable/test_image_2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_profile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_profile_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/username_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/username_textview_style"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textColor="@color/ultraLightGrey" /> -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_profile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- <com.google.android.material.textview.MaterialTextView
+    android:id="@+id/email_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/email_textview_style"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:textColor="@color/ultraLightGrey" /> -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_out"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Выйти"
+        android:textColor="@color/darkGrey"
+        app:strokeColor="@color/lightGrey" />
+
+</LinearLayout>
