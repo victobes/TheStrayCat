@@ -102,7 +102,7 @@ public class ProfileFragment extends Fragment {
             public void afterTextChanged(Editable s) {
                 final String nameProfile = userNameProfileEdit.getText().toString();
 
-                if(nameProfile != null)
+                if(!nameProfile.equals(" "))
                     updateProfileName(nameProfile, currentUser);
             }
         });

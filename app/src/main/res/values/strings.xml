@@ -30,5 +30,9 @@
     <string name="google_maps_key">AIzaSyBKtQrRdTkxdAZOMBrQ-Ky2RsSecJ16YHc</string>
     <string name="marker_title">2</string>
     <string name="test_text">Три инвалида. - Страдания Джорджа и Гарриса. - Жертва ста семи смертельных болезней/недугов. - Полезные рекомендации. - Лекарство от проблем с печенью у детей. Мы сошлись во мнениях, что мы переутомились и нуждаемся в отдыхе. - Неделя катания по морю/океану? - Джордж предложил путешествие по реке. - Монморанси возражает. - Первоначальное предложение принято большинством: трое против одного.</string>
+    <string name="id_first_object">BpLfzGobqRZVPmh4bmxu</string>
+    <string name="id_second_object">aZ4TbUrrIoS6pbVOI3K8</string>
+    <string name="id_third_object">oTtINbUoBDgWXz7RjkM2</string>
+    <string name="first_object">Первый пункт</string>
 
 </resources>
